@@ -163,9 +163,5 @@ interface IForeignControllerLike is IAccessControl {
     function usde() external view returns (address);
     function usdc() external view returns (address);
     function susde() external view returns (address);
-
-    //function DEFAULT_ADMIN_ROLE() external view returns (address);
-    //function FREEZER() external view returns (address);
-    //function RELAYER() external view returns (address);
 }
 

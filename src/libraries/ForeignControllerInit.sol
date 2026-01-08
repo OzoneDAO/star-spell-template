@@ -31,8 +31,6 @@ library ForeignControllerInit {
         address psm;
         address cctp;
         address usdc;
-        // address susds;
-        // address usds;
     }
 
     struct ConfigAddressParams {
@@ -134,19 +132,6 @@ library ForeignControllerInit {
         require(address(newController.cctp()) == checkAddresses.cctp, "ForeignControllerInit/incorrect-cctp");
 
         require(configAddresses.oldController != address(newController), "ForeignControllerInit/old-controller-is-new-controller");
-
-        // Step 2: Perform PSM sanity checks
-
-        // IPSM3Like psm = IPSM3Like(checkAddresses.psm);
-
-        // require(psm.totalAssets() >= 1e18, "ForeignControllerInit/psm-totalAssets-not-seeded");
-        // require(psm.totalShares() >= 1e18, "ForeignControllerInit/psm-totalShares-not-seeded");
-
-        // require(psm.usdc()  == checkAddresses.usdc,  "ForeignControllerInit/psm-incorrect-usdc");
-        // require(psm.usds()  == checkAddresses.usds,  "ForeignControllerInit/psm-incorrect-usds");
-        // require(psm.susds() == checkAddresses.susds, "ForeignControllerInit/psm-incorrect-susds");
-
-        // Step 3: Configure ACL permissions controller, almProxy, and rateLimits
 
         IALMProxyLike   almProxy   = IALMProxyLike(controllerInst.almProxy);
         IRateLimitsLike rateLimits = IRateLimitsLike(controllerInst.rateLimits);

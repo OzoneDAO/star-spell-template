@@ -4,7 +4,7 @@ pragma solidity 0.8.25;
 import { Ethereum } from  "../address-registry/Ethereum.sol";
 import { Avalanche } from "../address-registry/Avalanche.sol";
 
-import { IExecutorLike } from             "../interfaces/IExecutorLike.sol";
+import { IExecutorLike } from         "../interfaces/IExecutorLike.sol";
 import { IStarSpellLike } from        "../interfaces/IStarSpellLike.sol";
 import { LiquidityLayerHelpers } from "./LiquidityLayerHelpers.sol";
 

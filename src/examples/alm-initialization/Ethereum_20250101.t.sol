@@ -235,8 +235,6 @@ contract Ethereum_20250101Test is LiquidityLayerTestBase {
         assertGt(IERC20(SPELL.SYRUP_USDC_VAULT()).balanceOf(Ethereum.ALM_PROXY), 0, "should have SyrupUSDC shares");
         vm.warp(block.timestamp + 10 days);
         controller.mintUSDS(100_000_000e18);
-        // controller.swapUSDSToUSDC(100_000_000e6);
-        // controller.depositERC4626(SPELL.SYRUP_USDC_VAULT(), 100_000_000e6);
         vm.stopPrank();
     }
 
